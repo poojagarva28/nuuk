@@ -1,0 +1,503 @@
+/* common css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dosis", sans-serif;
+}
+body {
+  margin: 0 2%;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h2 {
+  margin: 0px;
+  font-size: 42px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 600;
+  color: #121213;
+  z-index: 2;
+}
+h2 span {
+  position: absolute;
+  left: -53px;
+  top: -26px;
+  color: rgba(241, 241, 247, 0.4);
+  font-size: 120px;
+  letter-spacing: 11px;
+  z-index: -1;
+}
+h3 {
+  font-size: 15px;
+  color: #fff;
+  line-height: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+h3::after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid #ff6361;
+  width: 50%;
+  top: 50%;
+  margin-left: 8px;
+}
+h4 {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 13px;
+  position: relative;
+  margin-bottom: 5px;
+}
+h4 a:hover::after {
+  content: "";
+  border-bottom: 2px solid #e47312;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  bottom: -6px;
+  animation: lineopacity 0.3s ease-in;
+}
+p {
+  font-size: 17px;
+  line-height: 25px;
+  font-family: Dosis, sans-serif;
+  color: #919197;
+}
+.white {
+  color: #fff;
+}
+
+.gray-section {
+  background-color: #f7f8fc;
+  padding: 0% 0% 20px 20px;
+}
+.gray-section h2 span {
+  color: rgba(241, 241, 247, 0.75);
+}
+
+/* about section */
+section.about-section div {
+  display: flex;
+  justify-content: center;
+}
+section.about-section .imgsec {
+  width: 50%;
+}
+section.about-section .imgsec img {
+  width: 100%;
+}
+section.about-section .content-sec {
+  padding: 10% 5%;
+}
+section.about-section .about-content {
+  width: 50%;
+  flex-direction: column;
+  padding-left: 100px;
+}
+section.about-section h2 {
+  margin-bottom: 35px;
+}
+section.about-section p {
+  margin-bottom: 30px;
+  color: #919197;
+  font-size: 17px;
+  line-height: 25px;
+}
+section.about-section h4 {
+  display: inline;
+  margin-top: 20px;
+  width: 19%;
+}
+section.about-section h4 a {
+  color: #919197;
+}
+
+/* counter section */
+section.counter-sec {
+  padding: 0 5% 10% 5%;
+}
+section.counter-sec .counter-box {
+  display: flex;
+  justify-content: space-between;
+}
+section.counter-sec .counter-box h2 {
+  margin-bottom: 10px;
+  color: #e47312;
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 500;
+}
+section.counter-sec .counter-box p {
+  margin-bottom: 10px;
+  color: #919197;
+  font-size: 17px;
+  line-height: 25px;
+  padding-right: 40%;
+}
+
+/* work section */
+section .work-section .work-image .img-container {
+  display: inline-flex;
+  width: 32%;
+  margin: 5px;
+}
+section .work-section .work-image .img-container img {
+  width: 100%;
+}
+section .work-section .work-image .img-container .img-sec {
+  position: relative;
+}
+section .work-section .work-image .img-container .image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 99%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+section .work-section .work-image .img-container:hover .image-overlay {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+section .work-section .work-image .img-container .image-overlay span {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(59deg, #ff6361, #e47312);
+  border-radius: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* great section */
+.great-section {
+  text-align: center;
+  padding: 95px 68px 150px;
+  background-image: linear-gradient(72deg, #e47312, rgba(255, 99, 97, 0.78)),
+    url(https://nuuk-e3eaa.firebaseapp.com/assets/img/banner-2.jpg);
+  background-attachment: fixed;
+}
+.great-section h4 {
+  display: inline;
+  top: 40px;
+}
+.great-section h4 a:hover::after {
+  border-color: #fff;
+}
+.great-section p {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 300;
+}
+
+/* team section */
+.team-section .team-outer {
+  padding: 0 5%;
+}
+.team-section .team-container {
+  display: inline-block;
+  width: 23%;
+  margin: 0px 10px;
+  position: relative;
+}
+.team-section .team-container .img-sec {
+  height: 300px;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+}
+.team-section .team-container .img-sec img {
+  width: 100%;
+}
+.team-section .team-container .team-desc {
+  padding: 29px 66px 29px 29px;
+  background-color: #fff;
+  z-index: 1;
+  position: relative;
+}
+.team-section .team-container .team-desc h3 {
+  color: #121213;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.team-section .team-container .team-desc h3::after {
+  display: none;
+}
+.team-section .team-container .team-social-container {
+  position: absolute;
+  background-color: #e47312;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  height: 43%;
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.team-section .team-container .team-social-container a {
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  width: 30px;
+  text-align: center;
+}
+.team-section .team-container .team-social-container a::after {
+  content: "";
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -15px;
+}
+.team-section .team-container .team-social-container a:last-child::after {
+  display: none;
+}
+
+/* news section */
+.testimonial-section .testi-left {
+  width: 40%;
+}
+.testimonial-section .testi-right {
+  width: 60%;
+}
+.testimonial-section h2 {
+  margin-bottom: 28px;
+}
+.testimonial-section .testi-left p {
+  margin-bottom: 25px;
+}
+.testimonial-section .testi-left h4 {
+  display: inline;
+}
+.testimonial-section .testi-right .testibox-left,
+.testimonial-section .testi-right .testibox-right {
+  width: 50%;
+}
+
+/* news section */
+section.news-section {
+  padding: 10% 5%;
+}
+section .heading-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .heading-section-p {
+  padding: 7% 5%;
+}
+section .heading-section h4 a {
+  color: #919198;
+}
+section.news-section .news-box-section {
+  display: flex;
+}
+section.news-section .news-box-section .news-box {
+  /* width: 33%; */
+  margin: 0px 10px;
+}
+section.news-section .news-box-section .news-box:first-child {
+  margin-left: 0px;
+}
+section.news-section .news-box-section .news-box:last-child {
+  margin-right: 0px;
+}
+section.news-section .news-box-section .news-box img {
+  width: 100%;
+}
+section.news-section .news-box-section .news-box .news-desc {
+  padding: 25px 56px 35px 30px;
+  background: linear-gradient(158deg, #e47312, #ff6361);
+  margin-top: -5px;
+}
+section.news-section .news-box-section .news-box h3 {
+  margin-bottom: 15px;
+  font-size: 19px;
+  line-height: 26px;
+}
+section.news-section .news-box-section .news-box h3::after {
+  display: none;
+}
+section.news-section .news-box-section .news-box p {
+  color: hsla(0, 0%, 100%, 0.7);
+  margin-bottom: 15px;
+}
+section.news-section .news-box-section .news-box h4 {
+  display: inline;
+}
+section.news-section .news-box-section .news-box h4 a {
+  color: #fff;
+}
+section.news-section .news-box-section .news-box h4 a::after {
+  content: "";
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -6px;
+  animation: none;
+  transition: 0.2s ease-in;
+}
+section.news-section .news-box-section .news-box h4 a:hover::after {
+  border-color: #fff;
+}
+section.news-section .news-box-section .news-image {
+  position: relative;
+}
+section.news-section .news-box-section .news-image .image-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+section.news-section .news-box-section .news-image .image-overlay .date {
+  background-image: linear-gradient(45deg, #ff6361, #e47312);
+  font-size: 26px;
+  font-weight: 400;
+  padding: 20px;
+  color: #fff;
+}
+section.news-section .news-box-section .news-image .image-overlay .month {
+  color: #9d9da5;
+  background-color: #fff;
+  padding: 8px 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* logo section */
+section.logo-section {
+  padding: 70px 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(56deg, #e47312, #ff6361);
+}
+section.logo-section img {
+  width: 8%;
+}
+section.logo-section h4 {
+  font-size: 15px;
+}
+
+/* footer */
+footer {
+  background-color: #0a1229;
+  width: 90%;
+  margin: 0 auto;
+  padding: 70px 50px 150px 70px;
+  display: flex;
+  position: relative;
+}
+footer div {
+  width: 100%;
+  padding-right: 50px;
+}
+footer h4 {
+  margin-top: 20px;
+}
+footer h4 a {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 13px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+footer h4 a:hover::after {
+  content: "";
+  border-bottom: 2px solid #fff;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  bottom: -6px;
+  animation: lineopacity 0.3s ease-in;
+}
+@keyframes lineopacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+footer ul li h4 {
+  margin-top: 0px;
+}
+footer ul li {
+  margin-bottom: 15px;
+}
+footer .fa {
+  color: #fff;
+}
+footer .contact-section {
+  display: flex;
+  margin-bottom: 15px;
+}
+footer .contact-section div {
+  padding: 0;
+  width: initial;
+}
+footer .contact-section h4 {
+  margin-top: 0px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 20px;
+}
+footer .contact-section div:last-child {
+  margin-left: 20px;
+}
+footer .contact-section a {
+  color: hsla(0, 0%, 100%, 0.7);
+  font-size: 17px;
+  line-height: 25px;
+}
+footer .copywrite-section {
+  position: absolute;
+  bottom: -4px;
+}
+footer .copywrite-section img {
+  padding: 45px 35px;
+  background-color: #e47312;
+  max-width: 100%;
+  width: 160px;
+}

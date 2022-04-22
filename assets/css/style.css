@@ -633,6 +633,7 @@ section .work-section .work-image .img-container .image-overlay span {
 }
 .testimonial-section .testi-left h4 {
   display: inline;
+  width: 90px;
 }
 .testimonial-section .testi-right .testibox-left,
 .testimonial-section .testi-right .testibox-right {
@@ -893,7 +894,11 @@ footer .copywrite-section img {
     letter-spacing: 1px;
     left: 0;
     top: -40px;
-    color: #919198;
+    color: #919198 !important;
+  }
+
+  .gray-section .heading-section-p {
+    padding-left: 0px;
   }
   .bannersection {
     height: 100vh;
@@ -903,10 +908,10 @@ footer .copywrite-section img {
     width: 100%;
     height: auto;
     padding: 30px 0px;
-    bottom: -550px;
+    bottom: -512px;
   }
   section.speci-section {
-    margin-top: 600px;
+    margin-top: 560px;
   }
   .bannersection .socialbox .team-social-container {
     bottom: 0px;

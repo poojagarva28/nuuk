@@ -23,6 +23,87 @@
     <title>HTML-CSS Final Project-Nuuk Webapp</title>
   </head>
   <body>
+    <div class="bannersection">
+      <header>
+        <div class="logosec">
+          <a href="index.html"
+            ><img
+              src="https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-white.png"
+              alt="logo nukk header"
+          /></a>
+        </div>
+
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Projects</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <div class="dropdown">
+                <a class="dropbtn"> Pages <i class="fa fa-caret-down"></i> </a>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#" class="active">404 Error Page</a>
+                  <a href="#">Protected Page</a>
+                  <a href="#">Style Guide</a>
+                  <a href="#">Licensing</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <a href="#">Get Free Quote</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="bannercontent">
+        <h1 class="white">You Dream, We Create</h1>
+        <p class="white">
+          We turn your ideas to reality, we don't stop until you're satisfied.
+        </p>
+        <button class="btn">Get Free Quote</button>
+      </div>
+      <div class="contactbox">
+        <div>
+          <i class="fa fa-phone"></i><br />
+          <h3>Phone Number</h3>
+          <a href="tel:1-800-506-266">1-800-506-266</a><br />
+          <a href="tel:1-100-777-800">1-100-777-800</a>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i><br />
+          <h3>Contact</h3>
+          <a href="mailto:contact@nuuk.com">contact@nuuk.com</a><br />
+          <a href="mailto:info@nuuk.com">info@nuuk.com</a>
+        </div>
+        <div>
+          <i class="fa fa-clock-o"></i><br />
+          <h3>Opening Times</h3>
+          <p>Mon - Sat 8:00 - 17:30, Sunday - Closed</p>
+          <h4><a href="#">Find on Map</a></h4>
+        </div>
+      </div>
+      <div class="socialbox">
+        <div class="team-social-container">
+          <a href="#"><i class="fa fa-facebook-f"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
     <main>
       <section class="speci-section">
         <div class="work-section">
@@ -546,5 +627,25 @@
         </a>
       </div>
     </footer>
+    <!-- <script>
+      /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      // Close the dropdown menu if the user clicks outside of it
+      window.onmouseover = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script> -->
   </body>
 </html>

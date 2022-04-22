@@ -6,6 +6,7 @@
   font-family: "Dosis", sans-serif;
 }
 body {
+  padding-top: 2%;
   margin: 0 2%;
 }
 ul {
@@ -13,6 +14,14 @@ ul {
 }
 a {
   text-decoration: none;
+}
+h1 {
+  font-size: 62px;
+  line-height: 70px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 h2 {
   margin: 0px;
@@ -87,6 +96,294 @@ p {
 }
 .gray-section h2 span {
   color: rgba(241, 241, 247, 0.75);
+}
+
+/* navigation */
+header img {
+  padding: 50px 35px;
+  background-color: #e47312;
+  max-width: 100%;
+  width: 170px;
+}
+header ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+header ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+header ul li {
+  position: relative;
+}
+header ul li a::before {
+  content: "";
+  border-left: 1px solid #e47312;
+  top: -40px;
+  position: absolute;
+  height: 30px;
+  left: 50%;
+  opacity: 0;
+}
+header ul li a::after {
+  content: "";
+  border-left: 1px solid #e47312;
+  bottom: -40px;
+  position: absolute;
+  height: 30px;
+  left: 50%;
+  opacity: 0;
+}
+
+header ul li a {
+  color: #e47312;
+  padding: 31px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.15s ease-in;
+}
+
+header ul li a:hover::before {
+  animation: lineanimationbefore 0.2s ease-in;
+  animation-fill-mode: forwards;
+}
+header ul li a:hover::after {
+  animation: lineanimationafter 0.2s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes lineanimationbefore {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 30px;
+  }
+}
+@keyframes lineanimationafter {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 30px;
+  }
+}
+
+header ul li:last-child a {
+  background-color: #e47312;
+  color: #fff;
+  padding: 43px 14px;
+  top: -2px;
+  position: relative;
+}
+header ul li:last-child a::before,
+header ul li:last-child a::after {
+  display: none;
+}
+.dropbtn {
+  border: none;
+  background-color: transparent;
+  margin-top: 3px;
+}
+.dropbtn:hover {
+  cursor: pointer;
+}
+header {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  z-index: 9;
+  background-color: #fff;
+  height: 100px;
+}
+header .logosec {
+  margin-top: 25px;
+}
+header .stories {
+  margin: 0;
+  font-weight: 500;
+  font-family: Raleway;
+  font-style: Italic;
+}
+header h3.logo {
+  width: 130px;
+  font-size: 32px;
+  color: #0084ff;
+  margin: 0;
+  padding: 0;
+}
+
+/* dropdown */
+/* Dropdown Button */
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+}
+.dropdown:hover .dropdown-content {
+  display: inherit;
+}
+
+.dropdown img {
+  margin-left: 8px;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 0.5em;
+  background-color: #fff;
+  min-width: 250px;
+  z-index: 1;
+  margin-top: 20px;
+  left: 0px;
+  top: 30px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+}
+.dropdown-content a:hover {
+  color: #e47312;
+  background-color: #f1f1f7;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+/* banner section */
+.bannersection {
+  height: 85vh;
+  background-image: linear-gradient(
+      76deg,
+      rgba(193, 195, 204, 0.83) 35%,
+      rgba(193, 195, 204, 0.28) 65%
+    ),
+    url(https://nuuk-e3eaa.firebaseapp.com/assets/img/slide-2.jpg);
+  background-attachment: fixed;
+  background-position: 0px 0px, 50% 0%;
+  background-size: auto, cover;
+  padding: 0 5%;
+  position: relative;
+  margin-bottom: 10%;
+}
+.bannersection .bannercontent p {
+  margin-bottom: 30px;
+}
+.bannersection .bannercontent button {
+  background-color: #e47312;
+  border: none;
+  color: #fff;
+  padding: 15px 25px;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.15s ease-in;
+}
+.bannersection .bannercontent button:hover,
+header ul li:last-child a:hover {
+  cursor: pointer;
+  background-color: #e98a38;
+}
+.bannersection .bannercontent {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bannersection .contactbox {
+  display: flex;
+  background: linear-gradient(186deg, #e47312, #ff6361);
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 1000px;
+  position: absolute;
+  right: 0;
+  bottom: -80px;
+  height: 220px;
+}
+.bannersection .contactbox .fa {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.bannersection .contactbox h3 {
+  font-size: 13px;
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+.bannersection .contactbox a,
+.bannersection .contactbox p {
+  color: hsla(0, 0%, 100%, 0.7);
+  margin-bottom: 5px;
+  line-height: 25px;
+}
+.bannersection .contactbox p {
+  margin-bottom: 15px;
+}
+.bannersection .contactbox h4 {
+  display: inline;
+}
+.bannersection .contactbox h4 a {
+  color: #fff;
+}
+.bannersection .contactbox h4 a:hover::after {
+  border-color: #fff;
+}
+
+.bannersection .socialbox .team-social-container {
+  position: absolute;
+  background-color: #0a1229;
+  right: 0;
+  bottom: 140px;
+  height: 35%;
+  width: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.bannersection .socialbox .team-social-container .fa {
+  color: #fff;
+}
+.bannersection .socialbox .team-social-container a {
+  position: relative;
+  width: 30px;
+  text-align: center;
+  padding: 15px 0px;
+}
+.bannersection .socialbox .team-social-container > a::after {
+  content: "";
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0px;
+}
+.bannersection .socialbox .team-social-container a:last-child::after {
+  display: none;
 }
 
 /* specialization section */
@@ -597,6 +894,28 @@ footer .copywrite-section img {
     left: 0;
     top: -40px;
     color: #919198;
+  }
+  .bannersection {
+    height: 100vh;
+  }
+  .bannersection .contactbox {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 30px 0px;
+    bottom: -550px;
+  }
+  section.speci-section {
+    margin-top: 600px;
+  }
+  .bannersection .socialbox .team-social-container {
+    bottom: 0px;
+  }
+  .bannersection .contactbox div {
+    margin-bottom: 40px;
+  }
+  .bannersection .contactbox div:last-child {
+    margin-bottom: 0px;
   }
   section.speci-section .main-content {
     flex-direction: column;

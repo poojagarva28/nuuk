@@ -24,6 +24,9 @@
   </head>
   <body>
     <div class="bannersection">
+      <div class="mobilemnenu">
+        <i class="fa fa-bars" id="bar"></i>
+      </div>
       <header>
         <div class="logosec">
           <a href="index.html"
@@ -33,7 +36,7 @@
           /></a>
         </div>
 
-        <nav>
+        <nav class="hidden">
           <ul>
             <li>
               <a href="#">Home</a>
@@ -627,25 +630,19 @@
         </a>
       </div>
     </footer>
-    <!-- <script>
-      /* When the user clicks on the button,
-    toggle between hiding and showing the dropdown content */
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
-      // Close the dropdown menu if the user clicks outside of it
-      window.onmouseover = function (event) {
-        if (!event.target.matches(".dropbtn")) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
-            }
-          }
-        }
-      };
-    </script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("#bar").click(function () {
+        $("#bar").toggleClass("fa-bars fa-times");
+        $("nav").toggleClass("show hidden");
+      });
+      $(".dropdown").click(function () {
+        $(".dropdown-content").toggleClass("showdrpdwn hidden");
+      });
+    </script>
   </body>
 </html>
